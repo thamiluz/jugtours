@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  jugtours:
+    container_name: jugtours-spring
+    build:
+      context: ./jugtours
+      dockerfile: Dockerfile
+    volumes:
+      - ./jugtours:/app
+    # env_file:
+    #   - ./../.env
+    ports:
+      - "8080:8080"
+  jugtours-front:
+    container_name: jugtours-front
+    build:
+      context: ./jugtours-front
+      dockerfile: Dockerfile
+    volumes:
+      - ./jugtours-front:/app
+    # env_file:
+    #   - ./../.env
+    ports:
+      - "3000:3000"
+#   mysql:
+#     container_name: jugtours-mysql
+#     image: mysql
+#     ports:
+#       - "3306:3306"
+#     env_file:
+#       - ./../.env
+#     volumes:
+#       - jugtours-volume:/var/lib/mysql
+# volumes:
+#   jugtours-volume:
