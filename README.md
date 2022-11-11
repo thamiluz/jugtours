@@ -2,7 +2,7 @@
 
 Project created with Java Spring and React based on the Okta Developer tutorial.
 
-Modified to use containers.
+Modified to use containers and improve general code structure.
 
 ## Run it
 1. Clone the repository
